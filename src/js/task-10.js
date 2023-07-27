@@ -20,6 +20,7 @@ document.body.append(divBox);
 
 function createBoxes(amount) {
   let boxSize = 30;
+  const elementsArray = [];
   for (let i = 0; i < Number(amount); i += 1) {
     const elementDiv = document.createElement('div');
     elementDiv.style.backgroundColor = getRandomHexColor();
@@ -28,8 +29,9 @@ function createBoxes(amount) {
     elementDiv.style.height = `${boxSize}px`;
     boxSize += 10;
 
-    divBox.append(elementDiv);
+    elementsArray.push(elementDiv);
   }
+  divBox.append(...elementsArray);
 }
 
 function handleCreate() {

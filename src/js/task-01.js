@@ -11,5 +11,5 @@ console.log(`Number of categories: ${categoryItems.length}`);
 categoryItems.forEach(item => {
 const categoryTitle = item.querySelector('h2').textContent;
 const categoryElements = item.querySelectorAll('li').length;
-console.log(`Title: ${categoryTitle}\n Elements: ${categoryElements}`);
+console.log(`Category: ${categoryTitle}\n Elements: ${categoryElements}`);
 })
